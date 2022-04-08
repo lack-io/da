@@ -71,3 +71,30 @@ func Insert(head *ListNode, index, val int) *ListNode {
 
 	return head
 }
+
+type DoubleNode struct {
+	Val  int
+	Prev *DoubleNode
+	Next *DoubleNode
+}
+
+func DoubleNodeInsert(node *DoubleNode, val int) {
+
+	next := node.Next
+	cur := &DoubleNode{Val: val}
+	cur.Next = next
+	cur.Prev = node
+	next.Prev = node
+	node.Next = cur
+
+}
+
+func DoubleNodeRemove(node *DoubleNode) {
+
+	prior := node.Prev
+	next := node.Next
+	prior.Next = next
+	next.Prev = prior
+
+	node = nil
+}
