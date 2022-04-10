@@ -1,13 +1,7 @@
 package day06
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
-func levelOrder(root *TreeNode) []int {
-	out := make([]int, 0)
+func levelOrder2(root *TreeNode) [][]int {
+	out := make([][]int, 0)
 
 	if root == nil {
 		return out
@@ -20,10 +14,11 @@ func levelOrder(root *TreeNode) []int {
 
 		length := len(stack)
 		q := make([]*TreeNode, 0)
+		row := make([]int, 0)
 		for i := 0; i < length; i++ {
 			node := stack[i]
 
-			out = append(out, node.Val)
+			row = append(row, node.Val)
 			if node.Left != nil {
 				q = append(q, node.Left)
 			}
@@ -31,6 +26,7 @@ func levelOrder(root *TreeNode) []int {
 				q = append(q, node.Right)
 			}
 		}
+		out = append(out, row)
 		stack = q
 	}
 
