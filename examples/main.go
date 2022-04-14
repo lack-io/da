@@ -1,16 +1,16 @@
 package main
 
-import (
-	"fmt"
-	"reflect"
-)
-
-type MyType struct {
-}
+import "fmt"
 
 func main() {
-	a := &MyType{}
-	b := new(MyType)
+	num := 3
+	nums := make([]int, 0)
 
-	fmt.Println(reflect.TypeOf(a).Kind() == reflect.TypeOf(b).Kind())
+	for num > 0 {
+		nums = append(nums, num%10)
+		num /= 10
+	}
+	fmt.Println(num)
+
+	fmt.Println(nums)
 }
