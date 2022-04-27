@@ -43,3 +43,52 @@ func postorderTraversal2(root *TreeNode) []int {
 
 	return out
 }
+
+func PostorderTraversal3(root *TreeNode) []int {
+	if root == nil {
+		return nil
+	}
+	cur := root
+	out := make([]int, 0)
+	var mostRight *TreeNode
+	for cur != nil {
+		mostRight = cur.Left
+		if mostRight != nil {
+			for mostRight.Right != nil && mostRight.Right != cur {
+				mostRight = mostRight.Right
+			}
+			if mostRight.Right == nil {
+				mostRight.Right = cur
+				cur = cur.Left
+				continue
+			} else {
+				mostRight.Right = nil
+				printEdge(cur.Left, &out)
+			}
+		}
+		cur = cur.Right
+	}
+	printEdge(root, &out)
+	return out
+}
+
+func printEdge(node *TreeNode, out *[]int) {
+	tail := reverse(node)
+	cur := tail
+	for cur != nil {
+		*out = append(*out, cur.Val)
+		cur = cur.Right
+	}
+	reverse(tail)
+}
+
+func reverse(node *TreeNode) *TreeNode {
+	var pre, next *TreeNode
+	for node != nil {
+		next = node.Right
+		node.Right = pre
+		pre = node
+		node = next
+	}
+	return pre
+}
