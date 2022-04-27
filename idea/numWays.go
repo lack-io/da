@@ -1,5 +1,6 @@
 package idea
 
+// https://leetcode-cn.com/problems/chuan-di-xin-xi/
 func numWays(n int, relation [][]int, k int) int {
 	ways := make(map[int]map[int]struct{}, 0)
 

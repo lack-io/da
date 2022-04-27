@@ -1,5 +1,6 @@
 package idea
 
+// https://leetcode-cn.com/problems/count-good-triplets/
 func countGoodTriplets(arr []int, a int, b int, c int) int {
 	length := len(arr)
 
