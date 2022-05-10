@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	fmt.Println(Decimal(float64(1)/math.Pow(6, 2), 5))
+	a := "123"
+	fmt.Println(a[2:3])
 }
 
 func Decimal(value float64, n int) float64 {
