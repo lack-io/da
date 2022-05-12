@@ -3,11 +3,13 @@ package main
 import (
 	"fmt"
 	"math"
+
+	"github.com/lack-io/da/sort"
 )
 
 func main() {
-	a := "123"
-	fmt.Println(a[2:3])
+	a := []int{1, 5, 2, 7, 10, 2, 234, 12, 431, 31, 112, 53, 123}
+	fmt.Println(sort.InsertSort(a))
 }
 
 func Decimal(value float64, n int) float64 {
