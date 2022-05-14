@@ -1,6 +1,7 @@
 package day
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -29,4 +30,8 @@ func Test_minDeletionSize(t *testing.T) {
 func Test_findMedianSortedArrays(t *testing.T) {
 	m := findMedianSortedArrays([]int{1}, []int{2, 3, 4, 5, 6, 7, 8})
 	t.Log(m)
+}
+
+func Test_isUnique(t *testing.T) {
+	fmt.Println(isUnique("abc"))
 }
