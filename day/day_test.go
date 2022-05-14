@@ -35,3 +35,9 @@ func Test_findMedianSortedArrays(t *testing.T) {
 func Test_isUnique(t *testing.T) {
 	fmt.Println(isUnique("abc"))
 }
+
+func Test_Validate(t *testing.T) {
+	t.Log(Validate("5"))
+	t.Log(Validate("Ooook"))
+	t.Log(Validate("Hhhhh55"))
+}

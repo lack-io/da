@@ -2,19 +2,15 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"log"
 )
 
 func main() {
-	a := 2
-	fmt.Println(a & 1 << 2)
-}
-
-func Decimal(value float64, n int) float64 {
-	p := 1e1
-	for i := 0; i < n-1; i++ {
-		p *= 1e1
+	a := ""
+	n, err := fmt.Scanln(&a)
+	if err != nil {
+		log.Fatalln(err)
 	}
+	fmt.Println(a, n)
 
-	return math.Trunc(value*p+0.5) * 1 / p
 }
