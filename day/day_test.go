@@ -41,3 +41,12 @@ func Test_Validate(t *testing.T) {
 	t.Log(Validate("Ooook"))
 	t.Log(Validate("Hhhhh55"))
 }
+
+func Test_convert(t *testing.T) {
+	//t.Log(convert("PAYPALISHIRING", 3))
+	t.Log(convert("PLRAAIIIYASINPHG", 4))
+}
+
+func Test_reverse(t *testing.T) {
+	t.Log(reverse(123))
+}

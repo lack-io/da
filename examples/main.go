@@ -2,15 +2,10 @@ package main
 
 import (
 	"fmt"
-	"log"
+
+	"github.com/lack-io/da/sort"
 )
 
 func main() {
-	a := ""
-	n, err := fmt.Scanln(&a)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	fmt.Println(a, n)
-
+	fmt.Println(sort.QuickSort([]int{6, 4, 1, 13, 23, 3}))
 }
