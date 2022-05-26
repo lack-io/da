@@ -50,3 +50,7 @@ func Test_convert(t *testing.T) {
 func Test_reverse(t *testing.T) {
 	t.Log(reverse(123))
 }
+
+func Test_fallingSquares(t *testing.T) {
+	t.Log(fallingSquares1([][]int{{7, 1}, {3, 3}, {7, 5}}))
+}
