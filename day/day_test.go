@@ -52,5 +52,9 @@ func Test_reverse(t *testing.T) {
 }
 
 func Test_fallingSquares(t *testing.T) {
-	t.Log(fallingSquares1([][]int{{7, 1}, {3, 3}, {7, 5}}))
+	t.Log(fallingSquares([][]int{{7, 1}, {3, 3}, {7, 5}}))
+}
+
+func Test_threeSumClosest(t *testing.T) {
+	t.Log(threeSumClosest([]int{1, 1, -1, -1, 3}, -1))
 }
