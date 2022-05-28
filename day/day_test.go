@@ -58,3 +58,7 @@ func Test_fallingSquares(t *testing.T) {
 func Test_threeSumClosest(t *testing.T) {
 	t.Log(threeSumClosest([]int{1, 1, -1, -1, 3}, -1))
 }
+
+func Test_fourSum(t *testing.T) {
+	t.Log(fourSum([]int{1, 0, -1, 0, -2, 2}, 0))
+}
