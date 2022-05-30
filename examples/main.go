@@ -1,10 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	a := "123"
-	fmt.Println(a[2:2])
+	a := 0
+	a = a<<1 + 0
+	a = a<<1 + 1
+	a = a<<1 + 1
+	fmt.Println(a)
 }
