@@ -1,11 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"sync"
+)
 
 func main() {
-	a := 0
-	a = a<<1 + 0
-	a = a<<1 + 1
-	a = a<<1 + 1
-	fmt.Println(a)
+	p := sync.Pool{}
+	p.Get()
 }
