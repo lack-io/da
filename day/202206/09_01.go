@@ -5,21 +5,21 @@ import (
 	"sort"
 )
 
-type Solution struct {
+type __Solution struct {
 	rects [][]int
 	sum   []int
 }
 
-func Constructor(rects [][]int) Solution {
+func __Constructor(rects [][]int) __Solution {
 	sum := make([]int, len(rects)+1)
 	for i, r := range rects {
 		a, b, x, y := r[0], r[1], r[2], r[3]
 		sum[i+1] = sum[i] + (x-a+1)*(y-b+1)
 	}
-	return Solution{rects: rects, sum: sum}
+	return __Solution{rects: rects, sum: sum}
 }
 
-func (s *Solution) Pick() []int {
+func (s *__Solution) Pick() []int {
 	k := rand.Intn(s.sum[len(s.sum)-1])
 	idx := sort.SearchInts(s.sum, k+1) - 1
 	r := s.rects[idx]
